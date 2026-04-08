@@ -2,6 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Search Dashboard</title>
     <link rel="stylesheet" href="style.css" />
   </head>
@@ -21,8 +22,15 @@
       <option value="price-high">Price: High to Low</option>
     </select>
 
-    <div id="productContainer"></div>
+    <div id="productContainer">
+      <div id="title"></div>
+      <div id="price"></div>
+      <div id="image">
+        <img src="" />
+      </div>
+    </div>
 
     <script type="module" src="./js/app.js"></script>
+    <script type="module" src="./js/ui.js"></script>
   </body>
 </html>

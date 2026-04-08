@@ -1,0 +1,21 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+#productContainer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+.card {
+  width: 200px;
+  border: 1px solid #ccc;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.card img {
+  width: 100%;
+}
