@@ -7,7 +7,7 @@ export function renderProducts(products) {
     card.classList.add("card");
 
     card.innerHTML = `
-    <img src="${pro.image}">
+    <img src="${pro.thumbnail}">
    <h3>${pro.title}</h3>
    <p>${pro.price}</p>
    `;
