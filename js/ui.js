@@ -7,9 +7,11 @@ export function renderProducts(products) {
     card.classList.add("card");
 
     card.innerHTML = `
+  <div class="img-box">
     <img src="${pro.thumbnail}">
-   <h3>${pro.title}</h3>
-   <p>${pro.price}</p>
+  </div>
+  <h3 class="title">${pro.title}</h3>
+  <p class="price">${pro.price}</p>
    `;
 
     container.appendChild(card);
