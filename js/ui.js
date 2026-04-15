@@ -17,3 +17,5 @@ export function renderProducts(products) {
     container.appendChild(card);
   });
 }
+
+
