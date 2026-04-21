@@ -1,5 +1,7 @@
+// API endpoint
 const API_URL = "https://dummyjson.com/products";
 
+// Fetch products from API
 export async function fetchProducts() {
   try {
     const response = await fetch(API_URL);
@@ -14,5 +16,3 @@ export async function fetchProducts() {
     console.log(error);
   }
 }
-
-

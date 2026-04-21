@@ -1,5 +1,6 @@
 const container = document.querySelector("#productContainer");
 
+// Render products on UI
 export function renderProducts(products) {
   container.innerHTML = "";
   products.forEach((pro) => {
@@ -17,5 +18,3 @@ export function renderProducts(products) {
     container.appendChild(card);
   });
 }
-
-
