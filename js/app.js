@@ -7,6 +7,10 @@ import { renderProducts } from "./ui.js";
 // Import debounce utility to optimize search input
 import { debounce } from "./debounce.js";
 
+import { showLoading } from "./ui.js";
+
+import { showError } from "./ui.js";
+
 const searchInput = document.querySelector("#searchInput");
 
 // Store all products from API
@@ -22,7 +26,17 @@ let sortOption = "default";
 
 // Initialize app: fetch products and setup UI
 async function init() {
-  allProducts = (await fetchProducts()).products;
+  showLoading();
+  try {
+    allProducts = (await fetchProducts()).products;
+  } catch (error) {
+    showError();
+    const btn = document.querySelector(".retry");
+    btn.addEventListener("click", () => {
+      init();
+    });
+    return;
+  }
   renderProducts(allProducts);
   setupCategoryDropdown();
   sortProducts();
@@ -33,7 +47,6 @@ init();
 // // Handle search input changes
 function handleSearch(evt) {
   searchText = evt.target.value.toLowerCase();
-  console.log(allProducts);
 
   applyFilters();
 }

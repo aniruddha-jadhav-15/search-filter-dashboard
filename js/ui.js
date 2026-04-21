@@ -18,3 +18,13 @@ export function renderProducts(products) {
     container.appendChild(card);
   });
 }
+
+export function showLoading() {
+  container.textContent = "Loading products...";
+}
+
+export function showError() {
+  const btn = document.querySelector(".retry");
+  container.textContent = "Something went wrong...";
+  btn.style.display = "block";
+}
