@@ -19,10 +19,12 @@ export function renderProducts(products) {
   });
 }
 
+// Displays loading state while fetching data
 export function showLoading() {
   container.textContent = "Loading products...";
 }
 
+// Displays error message when API request fails
 export function showError() {
   const btn = document.querySelector(".retry");
   container.textContent = "Something went wrong...";

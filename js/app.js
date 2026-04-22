@@ -85,6 +85,7 @@ function categoryFilter() {
   });
 }
 
+// Sets up sort option change and triggers filtering
 function sortProducts() {
   const select = document.querySelector("#sortOption");
   select.addEventListener("change", (evt) => {
@@ -93,7 +94,7 @@ function sortProducts() {
   });
 }
 
-// Apply category + search filters
+// Applies category, search, and sorting to products, then updates UI
 function applyFilters() {
   let filtered = allProducts;
 
