@@ -38,11 +38,11 @@ select:focus {
 
 /* Product Container Grid */
 #productContainer {
+  max-width: 1200px;
+  margin: 0 auto;
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
   gap: 20px;
 }
-
 /* CARD */
 .card {
   background: #fff;
@@ -87,7 +87,6 @@ select:focus {
   color: #111827;
   line-height: 1.4;
 
-  /* limit lines */
   display: -webkit-box;
   -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
@@ -133,5 +132,61 @@ select:focus {
 
   h1 {
     font-size: 22px;
+  }
+}
+
+@media (max-width: 480px) {
+  #productContainer {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+  }
+
+  .img-box img {
+    height: 130px;
+  }
+
+  body {
+    padding: 10px;
+  }
+
+  .card {
+    padding: 10px;
+  }
+
+  .title {
+    font-size: 14px;
+  }
+
+  .price {
+    font-size: 14px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+  #productContainer {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+  }
+}
+
+/* Tablet */
+@media (min-width: 481px) and (max-width: 768px) {
+  #productContainer {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* Laptop */
+@media (min-width: 769px) and (max-width: 1200px) {
+  #productContainer {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+/*  Large screens */
+@media (min-width: 1201px) {
+  #productContainer {
+    grid-template-columns: repeat(5, 1fr);
   }
 }
