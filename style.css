@@ -107,7 +107,7 @@ select:focus {
 
 /* ₹ symbol */
 .price::before {
-  content: "₹ ";
+  content: "$ ";
   color: #6b7280;
   font-weight: 500;
 }
